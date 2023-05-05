@@ -3,7 +3,7 @@ import NewTodo from "./NewTodo";
 
 export default function NewListContainer({ todos, toggleTodos, deleteTodos }) {
   return (
-    <ul>
+    <ul className=" m-1 p-2x ">
       {todos.length === 0 && <label>No todos</label>}
       {todos.map((todo) => {
         return (
