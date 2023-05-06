@@ -27,12 +27,12 @@ function App() {
 
   function addTodo(title) {
     setTodos((currentTodos) => [
-      ...currentTodos,
       {
         id: crypto.randomUUID(),
         title: title,
         completed: false,
       },
+      ...currentTodos,
     ]);
   }
 
