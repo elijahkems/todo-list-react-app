@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import NewForm from "./NewForm";
 import NewListContainer from "./NewListContainer";
 import "./App.css";
+import NewProgressBar from "./NewProgressBar";
 
 function App() {
   const [todos, setTodos] = useState(() => {
@@ -10,9 +11,19 @@ function App() {
   });
   useEffect(() => {
     localStorage.setItem("ITEMS", JSON.stringify(todos));
-    console.log(todos);
     return;
   }, [todos]);
+
+  function completedTodos() {
+    const completed = todos.filter((todo) => todo.completed);
+    if (completed <= 0) return completed.length;
+    return completed.length + " / " + todos.length;
+  }
+
+  function getLevel() {
+    const completed = todos.filter((todo) => todo.completed);
+    return Math.round((completed.length / todos.length) * 100);
+  }
 
   function addTodo(title) {
     setTodos((currentTodos) => [
@@ -56,6 +67,10 @@ function App() {
       </div>
       <div className=" container m-0 mx-auto text-primary-darker max-w-[1000px]">
         <NewForm addTodo={addTodo} className=" max-w-[500px]" />
+        <div className="m-2 px-4">
+          <h2>Completed Todos: {completedTodos()}</h2>
+          <NewProgressBar level={getLevel()} />
+        </div>
         <NewListContainer
           todos={todos}
           deleteTodos={deleteTodos}
