@@ -3,6 +3,7 @@ import NewForm from "./NewForm";
 import NewListContainer from "./NewListContainer";
 import "./App.css";
 import NewProgressBar from "./NewProgressBar";
+import { motion } from "framer-motion";
 
 function App() {
   const [todos, setTodos] = useState(() => {
@@ -60,11 +61,11 @@ function App() {
   //return
   return (
     <>
-      <div className=" my-2 mx-10 ">
+      <motion.div className=" my-2 mx-10 " drag>
         <button onClick={() => location.reload(true)}>
           <h2 className={headerStyles}>Todo list</h2>
         </button>
-      </div>
+      </motion.div>
       <div className=" container m-0 mx-auto text-primary-light max-w-[1000px]">
         <NewForm addTodo={addTodo} className=" max-w-[500px]" />
         <div className="m-2 px-4">
