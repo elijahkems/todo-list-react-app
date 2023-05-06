@@ -11,7 +11,7 @@ export default function NewForm({ addTodo }) {
   }
   return (
     <form
-      className="my-2 py-2 flex flex-row justify-between bg-slate "
+      className=" max-w-[700px] mx-auto my-2 p-2 flex flex-row justify-between bg-slate "
       action=""
       onSubmit={handleSubmit}
     >
@@ -19,12 +19,12 @@ export default function NewForm({ addTodo }) {
         type="text"
         value={newItem}
         onChange={(e) => setNewItem(e.target.value)}
-        className=" rounded  border-2 border-slate-500 m-2 p-2 w-full bg-slate-700 focus:outline-none focus:ring-1"
+        className=" rounded shadow-primary-dark shadow-md border-primary m-2 p-2 w-full bg-primary-light focus:outline-none focus:ring-1 ring-primary"
       />
       <input
         type="submit"
-        className=" rounded border border-slate-500 m-2 p-2
-         active:bg-slate-600 "
+        className=" rounded shadow-primary-dark shadow-md border-primary m-2 p-2 bg-primary-light text-primary-darker
+         active:bg-primary active:text-primary-light"
         value="Add Todo"
         onClick={handleSubmit}
       />

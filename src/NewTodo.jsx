@@ -1,24 +1,31 @@
 import React from "react";
+import { BiTrash } from "react-icons/bi";
+import NewCheckbox from "./NewCheckbox";
 
+//component
 export default function NewTodo({ toggleTodos, deleteTodos, todo }) {
   return (
-    <li className=" m-2 p-3 bg-slate-600  rounded justify-between ">
-      <label className=" text-center text-base text-grey-100 w-full">
-        <input
-          type="checkbox"
-          id="form-input"
+    <li className=" relative m-2 my-4 px-4  pb-3 shadow-md shadow-primary-dark bg-primary-light rounded ">
+      <div className=" rounded-br-lg rounded-tl-lg relative p-1 top-0 left-[-1em] border-b-2 border-r-2 border-primary flex flex-row space-x-3 js max-w-fit ">
+        <NewCheckbox
+          className="rounded text-primary-darker"
+          todo={todo}
           checked={todo.completed}
-          className="rounded-full w-5 h-5 border border-black"
-          onChange={(e) => toggleTodos(todo.id, e.target.checked)}
+          toggleTodos={toggleTodos}
         />
-        <span className="p-1 ">{todo.title}</span>
+        <BiTrash
+          className=" bg-primary-light text-xl text-primary-darker font-thick inline hover:text-primary hover:translate-y-[-5px] hover:transition-all duration-[900ms] "
+          onClick={() => deleteTodos(todo.id)}
+        />
+      </div>
+      <label className=" text-center text-base text-grey-100 w-full ">
+        <span
+          className="p-1 "
+          style={{ textDecoration: todo.completed ? "line-through" : "" }}
+        >
+          {todo.title}
+        </span>
       </label>
-      <input
-        type="button"
-        className=" text-black p-1 bg-rose-400 rounded  hover:bg-rose-400 focus:border-black"
-        value="delete"
-        onClick={() => deleteTodos(todo.id)}
-      />
     </li>
   );
 }

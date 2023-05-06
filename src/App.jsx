@@ -10,6 +10,7 @@ function App() {
   });
   useEffect(() => {
     localStorage.setItem("ITEMS", JSON.stringify(todos));
+    console.log(todos);
     return;
   }, [todos]);
 
@@ -39,19 +40,19 @@ function App() {
       });
     });
   }
-
+  console;
   //return
   return (
     <>
       <div className=" my-2 mx-10 ">
         <a href="" target="" rel="noopener noreferrer">
-          <h2 className=" bg-primary-light shadow-sm shadow-primary-dark rounded p-3 m-2 mt-10 text-xl  max-w-fit min-w-min whitespace-nowrap">
+          <h2 className=" bg-primary-light shadow-md shadow-primary-dark text-primary-darker rounded p-3 m-2 mt-10 text-xl  max-w-fit min-w-min whitespace-nowrap">
             Todo list
           </h2>
         </a>
       </div>
-      <div className=" max-w-[500px] m-0 mx-auto">
-        <NewForm addTodo={addTodo} />
+      <div className=" container m-0 mx-auto text-primary-darker max-w-[1000px]">
+        <NewForm addTodo={addTodo} className=" max-w-[500px]" />
         <NewListContainer
           todos={todos}
           deleteTodos={deleteTodos}
