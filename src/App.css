@@ -11,18 +11,14 @@
   box-sizing: border-box;
   background-image: linear-gradient(
     to right top,
-    #54759d,
-    #5f81aa,
-    #6a8eb8,
-    #769ac5,
-    #81a7d3,
-    #83aad8,
-    #84acdc,
-    #86afe1,
-    #7da8dd,
-    #75a1d9,
-    #6c9ad5,
-    #6493d1
+
+    #758ab3,
+    #8fa3ca,
+    #92a7ce,
+    #95acd2,
+    #98b0d6,
+    #83a0c8,
+    #6e90ba
   );
   font-family: "comme";
 }
