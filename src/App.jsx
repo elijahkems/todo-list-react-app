@@ -40,16 +40,19 @@ function App() {
       });
     });
   }
-  console;
+  const headerStyles = `bg-primary-light shadow-md shadow-primary-dark text-primary-darker rounded 
+                        p-3 m-2 mt-10 text-xl  
+                        max-w-fit min-w-min whitespace-nowrap 
+                        hover:shadow-xl hover:opacity-95
+                        hover:cursor-pointer
+                        active:shadow-lg`;
   //return
   return (
     <>
       <div className=" my-2 mx-10 ">
-        <a href="" target="" rel="noopener noreferrer">
-          <h2 className=" bg-primary-light shadow-md shadow-primary-dark text-primary-darker rounded p-3 m-2 mt-10 text-xl  max-w-fit min-w-min whitespace-nowrap hover:shadow-xl hover:opacity-95">
-            Todo list
-          </h2>
-        </a>
+        <button onClick={() => location.reload(true)}>
+          <h2 className={headerStyles}>Todo list</h2>
+        </button>
       </div>
       <div className=" container m-0 mx-auto text-primary-darker max-w-[1000px]">
         <NewForm addTodo={addTodo} className=" max-w-[500px]" />
