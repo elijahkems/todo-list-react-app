@@ -19,11 +19,11 @@ export default function NewForm({ addTodo }) {
         type="text"
         value={newItem}
         onChange={(e) => setNewItem(e.target.value)}
-        className=" rounded shadow-primary-dark shadow-md border-primary m-2 p-2 w-full bg-primary-light focus:outline-none focus:ring-1 ring-primary"
+        className=" rounded border-[1px] border-primary-borders m-2 p-2 w-full text-primary-light bg-primary-transparent focus:outline-none focus:ring-1 ring-primary"
       />
       <input
         type="submit"
-        className=" rounded shadow-primary-dark shadow-md border-primary m-2 p-2 bg-primary-light text-primary-darker
+        className=" rounded border-[1px] border-primary-borders m-2 p-2 bg-primary text-primary-light
          active:bg-primary active:text-primary-light"
         value="Add Todo"
         onClick={handleSubmit}

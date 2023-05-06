@@ -51,7 +51,7 @@ function App() {
       });
     });
   }
-  const headerStyles = `bg-primary-light shadow-md shadow-primary-dark text-primary-darker rounded 
+  const headerStyles = `bg-primary shadow-md shadow-primary-dark text-primary-light rounded 
                         p-3 m-2 mt-10 text-xl  
                         max-w-fit min-w-min whitespace-nowrap 
                         hover:shadow-xl hover:opacity-95
@@ -65,7 +65,7 @@ function App() {
           <h2 className={headerStyles}>Todo list</h2>
         </button>
       </div>
-      <div className=" container m-0 mx-auto text-primary-darker max-w-[1000px]">
+      <div className=" container m-0 mx-auto text-primary-light max-w-[1000px]">
         <NewForm addTodo={addTodo} className=" max-w-[500px]" />
         <div className="m-2 px-4">
           <h2>Completed Todos: {completedTodos()}</h2>

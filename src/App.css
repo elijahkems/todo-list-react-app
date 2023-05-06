@@ -2,23 +2,21 @@
   font-family: "comme";
   src: url(../public/fonts/comme.ttf);
 }
-
+:root {
+  --DEFAULT: #1e293b;
+  --light: #e5e7eb;
+  --borders: #64748a;
+  --darker: #0f172a;
+  --dark: #274472;
+  --transparent: #5c5c5c80;
+}
 #root {
   min-height: 100vh;
   width: 100%;
   overflow: hidden;
   border: solid 1px transparent;
   box-sizing: border-box;
-  background-image: linear-gradient(
-    to right top,
-
-    #758ab3,
-    #8fa3ca,
-    #92a7ce,
-    #95acd2,
-    #98b0d6,
-    #83a0c8,
-    #6e90ba
-  );
+  background-color: var(--darker);
   font-family: "comme";
+  color: var(--light);
 }
