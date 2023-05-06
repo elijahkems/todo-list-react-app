@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import { BiCheckboxChecked, BiCheckbox } from "react-icons/bi";
 
-export default function NewCheckbox({ checked, toggleTodos, todo }) {
+export default function NewCheckbox({
+  checked,
+  toggleTodos,
+  todo,
+  buttonStyles,
+}) {
   /* <input
         type="checkbox"
         id="form-input"
@@ -13,12 +18,11 @@ export default function NewCheckbox({ checked, toggleTodos, todo }) {
   function clickHandler(e) {
     toggleTodos(todo.id, !checked);
   }
-  const style =
-    "text-2xl hover:text-black hover:translate-y-[-5px] hover:transition-all duration-[900ms] ";
+  buttonStyles = buttonStyles + " text-2xl";
 
   return !checked ? (
-    <BiCheckbox className={style} onClick={clickHandler} />
+    <BiCheckbox className={buttonStyles} onClick={clickHandler} />
   ) : (
-    <BiCheckboxChecked className={style} onClick={clickHandler} />
+    <BiCheckboxChecked className={buttonStyles} onClick={clickHandler} />
   );
 }

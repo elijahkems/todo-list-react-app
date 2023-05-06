@@ -46,7 +46,7 @@ function App() {
     <>
       <div className=" my-2 mx-10 ">
         <a href="" target="" rel="noopener noreferrer">
-          <h2 className=" bg-primary-light shadow-md shadow-primary-dark text-primary-darker rounded p-3 m-2 mt-10 text-xl  max-w-fit min-w-min whitespace-nowrap">
+          <h2 className=" bg-primary-light shadow-md shadow-primary-dark text-primary-darker rounded p-3 m-2 mt-10 text-xl  max-w-fit min-w-min whitespace-nowrap hover:shadow-xl hover:opacity-95">
             Todo list
           </h2>
         </a>
