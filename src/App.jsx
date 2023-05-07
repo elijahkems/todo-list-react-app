@@ -61,7 +61,7 @@ function App() {
   //return
   return (
     <>
-      <motion.div className=" my-2 mx-10 " drag>
+      <motion.div className=" my-2 mx-10 ">
         <button onClick={() => location.reload(true)}>
           <h2 className={headerStyles}>Todo list</h2>
         </button>
